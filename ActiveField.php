@@ -7,7 +7,7 @@ use justinvoelker\awesomebootstrapcheckbox\Html;
 /**
  * @inheritdoc
  */
-class ActiveField extends \yii\bootstrap\ActiveField
+class ActiveField extends \yii\bootstrap4\ActiveField
 {
     /**
      * @inheritdoc
@@ -56,7 +56,7 @@ class ActiveField extends \yii\bootstrap\ActiveField
                 }
             }
             unset($options['labelOptions'], $options['divOptions']);
-            $options['label'] = null;
+            $options['label']       = null;
             $this->parts['{input}'] = Html::activeCheckbox($this->model, $this->attribute, $options);
         }
         $this->adjustLabelFor($options);
@@ -94,7 +94,7 @@ class ActiveField extends \yii\bootstrap\ActiveField
                 }
             }
             unset($options['labelOptions'], $options['divOptions']);
-            $options['label'] = null;
+            $options['label']       = null;
             $this->parts['{input}'] = Html::activeRadio($this->model, $this->attribute, $options);
         }
         $this->adjustLabelFor($options);
